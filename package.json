@@ -1,0 +1,31 @@
+{
+  "name": "arbitrage",
+  "version": "1.0.0",
+  "description": "Single-asset cross-exchange arbitrage bot leveraging volatility farming",
+  "engines": {
+    "node": "16.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker-start": "docker compose build --no-cache; docker-compose up -d",
+    "start": "npx ts-node app.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ws": "^8.2.2",
+    "ccxt": "^4.1.74",
+    "crypto-js": "^4.1.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^6.3.0",
+    "node-fetch": "^2.6.7",
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "@types/node-fetch": "^2.6.2"
+  }
+}

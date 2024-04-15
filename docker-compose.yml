@@ -1,0 +1,15 @@
+version: "1"
+services:
+  cex_arbitrage:
+    container_name: app
+    restart: always
+    build: .
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/
+    ports:
+      - "27017:27017"
